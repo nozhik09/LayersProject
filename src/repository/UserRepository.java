@@ -3,21 +3,20 @@ package repository;
 import model.Role;
 import model.User;
 import util.MyArrayList;
-import util.MyLinkedList;
 import util.MyList;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class RepositoryUser {
+public class UserRepository {
 
     private final MyList<User> users;
     // объект для генерации последовательных и уникальных ID
     private final AtomicInteger currentId = new AtomicInteger(1);
 
-    public RepositoryUser() {
-
+    public UserRepository() {
 
         this.users = new MyArrayList<>();
+        init();
 
     }
 

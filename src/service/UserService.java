@@ -1,14 +1,14 @@
 package service;
 
 import model.User;
-import repository.RepositoryUser;
+import repository.UserRepository;
 import util.MyList;
 
 public class UserService {
-    private final RepositoryUser repositoryUser;
+    private final UserRepository repositoryUser;
 
-    public UserService(RepositoryUser repositoryUser) {
-        this.repositoryUser = repositoryUser;
+    public UserService(UserRepository userRepository) {
+        this.repositoryUser = userRepository;
     }
 
     public MyList<User> getAllUsers() {
